@@ -1,0 +1,175 @@
+{
+    "questions": [{
+            "i": 1,
+            "q": "Which of the following best describes your current stage of life?",
+            "options": [
+                "Single with few financial burdens. Ready to accumulate wealth for future short term and long term goals.",
+                "A couple without children. Preparing for the future by establishing a home. Expecting to have or already have a high purchase rate of household and consumer items.",
+                "Young family with a home. You have a mortgage and childcare costs and maintain only small cash balances.",
+                "Mature family. You are in your peak earning years and your mortgage is under control. You both work and you may or may not have children that are growing up or have left home. You’re ready to start thinking about your retirement years.",
+                "Preparing for retirement. You own your home and have few financial burdens; you want to ensure you can afford a comfortable retirement.",
+                "Retired. You rely on existing funds and investments to maintain your lifestyle in retirement. You may already be receiving a Government pension and/or Superannuation pension."
+            ],
+            "points": [5,3,1,5,3,1]
+        },
+        {
+            "i": 2,
+            "q": "How familiar are you with investment matters?",
+            "options": [
+                "Not familiar at all with investments and feel uncomfortable with the complexity.",
+                "Not very familiar when it comes to investments.",
+                "Somewhat familiar. I don’t fully understand investments, including the share market.",
+                "Fairly familiar. I understand the various factors which influence investment performance.",
+                "Very familiar. I use research and other investment information to make investment decisions. I understand the various factors which influence investment performance."
+            ],
+            "points": [1,2,3,5,7]
+        },
+        {
+            "i": 3,
+            "q": "How long have you been investing, not counting your own home or bank type deposits?",
+            "options": [
+                "3 years or more",
+                "Up to 3 years",
+                "This is my/our first investment"
+            ],
+            "points": [5,2,1]
+        },
+        {
+            "i": 4,
+            "q": "How long would you invest the majority of your money before you think you would need access to it? (Assuming you already have plans in place to meet short term cash flow and/or emergencies.)",
+            "options": [
+                "In 2 years or less.",
+                "Within 3 – 5 years.",
+                "Within 6 – 10 years.",
+                "Not for 10 + years."
+            ],
+            "points": [1,3,5,7]
+        },
+        {
+            "i": 5,
+            "q": "In some instances, tax savings can be obtained from investments but this means taking on more risk. Which of the following statements best describes your goal for investing?",
+            "options": [
+                "Preferably guaranteed returns, before tax savings.",
+                "Stable, reliable returns, minimal tax savings",
+                "Some variability in returns, some tax savings",
+                "Moderate variability in returns, reasonable tax savings",
+                "Unstable but potentially higher returns, maximise tax savings"
+            ],
+            "points": [1,3,5,7,9]
+        },
+        {
+            "i": 6,
+            "q": "Assume you had an initial investment portfolio worth Rs 10,00,000. If, due to market conditions, your portfolio fell to Rs 8,50,000 within a short period, say a month, would you: (If your portfolio has experienced a drop like this, choose the answer that corresponds to your actual behaviour.)",
+            "options": [
+                "Sell all of the investments. You do not intend to take risks",
+                "Sell a portion of your portfolio to cut your losses and reinvest into more secure investment sectors",
+                "Hold the investment and sell nothing, expecting performance to improve",
+                "Invest more funds to lower your average investment price"
+            ],
+            "points": [1,3,5,7]
+        },
+        {
+            "i": 7,
+            "q": "If the value of your investments fell to Rs 6,00,000 over the next 12 months, would you: (If your portfolio has experienced a drop like this, choose the answer that corresponds to your actual behaviour.)",
+            "options": [
+                "Sell all of the remaining investment",
+                "Sell a portion of the remaining investment",
+                "Hold your investments and sell nothing, expecting conditions to improve.",
+                "Invest more funds. You can tolerate short term losses in expectation of future growth"
+            ],
+            "points": [1,3,5,7]
+        },
+        {
+            "i": 8,
+            "q": "The table below shows the highest one-year gain and highest one-year loss on four different hypothetical investments of Rs100,000. Given the potential gain or loss in any one year, where would you invest your money?<br /><br /><table class='table table-bordered table-hover'> <thead class='thead-light'> <tr> <th>Investment Portfolio</th> <th>A</th> <th>B</th> <th>C</th> <th>D</th> </tr> </thead> <tbody> <tr> <td>Highest Gain (Rs)</td> <td>15,000</td> <td>20,500</td> <td>26,600</td> <td>31,300</td> </tr> <tr> <td>Highest Loss (Rs)</td> <td>-2,400</td> <td>-6,400</td> <td>-11,000</td> <td>-14,600</td> </tr> </tbody> </table>",
+            "options": [
+                "Investment Portfolio A",
+                "Investment Portfolio B",
+                "Investment Portfolio C",
+                "Investment Portfolio D"
+            ],
+            "points": [1,3,5,7]
+        },
+        {
+            "i": 9,
+            "q": "Which one of the following statements describes your feelings towards choosing an investment?",
+            "options": [
+                "I would prefer investments with little or no fluctuation in value and have a low degree of risk associated with them. I am willing to accept the lower return associated with these investments.",
+                "I prefer to diversify with a mix of investments that have an emphasis on low risk. I am happy to have a small proportion of the portfolio invested in assets that have a higher degree of risk in order to achieve a slightly higher return. I am prepared to accept a negative investment return of 1 in 10 years.",
+                "I prefer to have a spread of investments in a balanced portfolio. I am happy to have a negative return of 1 in 7 years.",
+                "I prefer to diversify my investments with an emphasis on more investments that have higher returns, but still having a small amount of low risk investments. I am happy to accept a negative return of 1 in 5 years.",
+                "I would select investments that have a higher degree of investment price fluctuation so that I can earn higher long term returns. I am happy to accept a negative return of 1 in 3 years in order to achieve this goal"
+            ],
+            "points": [1,3,5,7,9]
+        },
+        {
+            "i": 10,
+            "q": "How secure is your current and future income from sources such as salary, pensions or other investments?",
+            "options": [
+                "Not secure",
+                "Somewhat secure",
+                "Fairly secure",
+                "Very secure"
+            ],
+            "points": [1,3,5,7]
+        },
+        {
+            "i": 11,
+            "q": "Apart from your home, have you ever borrowed money to make an investment?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "input": "Percentage of your total assets",
+            "points": [0,0]
+        },
+        {
+            "i": 12,
+            "q": "Would you consider borrowing money to make an investment?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "input": "What is the maximum level of borrowing (gearing) you are prepared to accept as a percentage of your net assets (your equity)?",
+            "points": [0,0]
+        }
+    ],
+    "points": [{
+            "profile": "Conservative",
+            "score": "0 - 18",
+            "from": 0,
+            "to": 18,
+            "description": "You are a conservative investor who does not wish to take any investment risk. Your priority is to safeguard your investment capital. You are prepared to forego higher returns for peace of mind"
+        },
+        {
+            "profile": "Balanced",
+            "score": "19 - 40",
+            "from": 19,
+            "to": 40,
+            "description": "You are a balanced investor with some understanding of investment market behaviour. You prefer a balance between capital growth and capital security. You are prepared to accept some short term risk in order to gain longer term capital growth."
+        },
+        {
+            "profile": "Assertive(Growth)",
+            "score": "41 - 52",
+            "from": 41,
+            "to": 52,
+            "description": "You are an assertive investor who understands the movement of investment markets. You are most interested in maximising long term capital growth, although you do not wish to make unbalanced investment decisions. You are happy to take calculated risks in order to maximise long term capital growth. Tax advantaged investments are a focus."
+        },
+        {
+            "profile": "Aggressive",
+            "score": "53 - 65",
+            "from": 53,
+            "to": 65,
+            "description": "You are an aggressive investor with a strong bias towards investments with high growth potential. You are willing to accept higher performance fluctuations in return for potentially higher long term capital growth. You also have a greater focus on tax advantaged investments and/or leverage of your assets to further improve capital growth potential."
+        },
+        {
+            "profile": "Very Aggressive",
+            "score": "66+",
+            "from": 66,
+            "to": 100,
+            "description": "You are an experienced or sophisticated investor. Security of capital is secondary to the pursuit of high investment returns. Your portfolio will comprise almost solely of growth assets and you are happy to accept the risks this involves."
+        }
+    ],
+    "text1": "<p>Add up the points you scored for each answer. Based on the total points, you can compare your score with the range of profiles described below.</p>",
+    "text2": "<p>Please remember that this questionnaire is designed to help you evaluate your risk profile and that given the answers to the above questions, your risk profile may be in the indicated sector.</p><p>If you feel comfortable with the analysis provided, then your Investment Adviser can use it to devise an appropriate investment portfolio. If you don’t agree with the analysis, or want to ask more questions about it, please discuss it with your Investment Adviser.</p><p>I hereby acknowledge that the above investment risk stance is consistent with my investment risk requirements and profile.</p><p>I have had the concept of investment risk explained to me and am happy to proceed on this basis</p><p class='text-center'>Or</p><p>The above investment risk stance is not consistent with my risk requirements and profile which I hereby nominate to be</p>"
+}

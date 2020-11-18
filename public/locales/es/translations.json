@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "WELCOME": "Bienvenido a Admin Panel"
+  },
+  "topbar": {
+    "search": {
+      "PLACEHOLDER": "Tipea y pulsa enter.."
+    }
+  },
+  "sidebar": {
+    "WELCOME": "Bienvenido",
+    "heading": {
+      "HEADER": "Navegacion principal"
+    },
+    "nav": {
+      "DASHBOARD": "Vista simple",
+      "menu": {
+        "MENU": "Menu",
+        "SUBMENU": "Sub Menu"
+      }
+    }
+  }
+}
