@@ -343,7 +343,7 @@ class Add extends Component {
                             <fieldset>
                                 <TextField type="text" name="specification" label="Specification"
                                     required={true} fullWidth={true}
-                                    value={this.state.formWizard.obj.subCategory}
+                                    // value={this.state.formWizard.obj.subCategory}
                                     inputProps={{ maxLength: 30, "data-validate": '[{ "key":"required"},{ "key":"minlen","param":"1"},{"key":"maxlen","param":"30"}]' }}
                                     helperText={errors?.specification?.length > 0 ? errors?.specification[0]?.msg : ""}
                                     error={errors?.specification?.length > 0}
@@ -505,7 +505,7 @@ class Add extends Component {
                             <fieldset>
                                 <TextField type="text" name="hsnCode" label="HSN Code"
                                     required={true} fullWidth={true}
-                                    value={this.state.formWizard.obj.subCategory}
+                                    // value={this.state.formWizard.obj.subCategory}
                                     inputProps={{ maxLength: 30, "data-validate": '[{ "key":"required"},{ "key":"minlen","param":"2"},{"key":"maxlen","param":"30"}]' }}
                                     helperText={errors?.hsnCode?.length > 0 ? errors?.hsnCode[0]?.msg : ""}
                                     error={errors?.hsnCode?.length > 0}
@@ -516,7 +516,7 @@ class Add extends Component {
                             <fieldset>
                                 <TextField type="text" name="packagingType" label="Packaging Type"
                                     required={true} fullWidth={true}
-                                    value={this.state.formWizard.obj.subCategory}
+                                    // value={this.state.formWizard.obj.subCategory}
                                     inputProps={{ maxLength: 30, "data-validate": '[{ "key":"required"},{ "key":"minlen","param":"2"},{"key":"maxlen","param":"30"}]' }}
                                     helperText={errors?.packagingType?.length > 0 ? errors?.packagingType[0]?.msg : ""}
                                     error={errors?.packagingType?.length > 0}

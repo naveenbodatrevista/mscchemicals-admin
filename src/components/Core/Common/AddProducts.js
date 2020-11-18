@@ -33,7 +33,7 @@ export function saveProducts(baseUrl, objId, products, callBack) {
             })
         }
 
-        if(idx == products.length - 1) {
+        if(idx === products.length - 1) {
             setTimeout(() => {
                 if(callBack) {
                     callBack();

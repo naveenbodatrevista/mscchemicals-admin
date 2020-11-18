@@ -29,7 +29,7 @@ import ContentWrapper from '../../Layout/ContentWrapper';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 
 class Add extends Component {
@@ -58,7 +58,6 @@ class Add extends Component {
                 linkedin: '',
                 wechat: '',
                 qq: '',
-                linkedin: '',
                 dob: null,
                 anniversary: null,
                 previousCompany: '',
@@ -131,7 +130,7 @@ class Add extends Component {
         var input = e.target;
         formWizard.obj[field] = input.value;
 
-        if(field == 'phone' && input.value >= 10) {
+        if(field === 'phone' && input.value >= 10) {
             formWizard.obj.whatsapp = input.value;
         }
 
@@ -170,7 +169,7 @@ class Add extends Component {
     }
 
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
 
         const tabPane = document.getElementById('saveForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
@@ -458,7 +457,7 @@ class Add extends Component {
                             </fieldset>
                             <fieldset>
                                 <TextField type="text" label="Where met first" name="firstMet" required={true} fullWidth={true}
-                                    inputProps={{ maxLength: 45,"data-validate": '[ { "key":"required"}]' }} name="firstMet"
+                                    inputProps={{ maxLength: 45,"data-validate": '[ { "key":"required"}]' }} 
                                     helperText={errors?.firstMet?.length > 0 ? errors?.firstMet[0]?.msg : ''}
                                     error={errors?.firstMet?.length > 0}
                                    
@@ -467,7 +466,7 @@ class Add extends Component {
                             </fieldset>
                             <fieldset>
                                 <TextField type="text" label="WhatsApp" required={true} fullWidth={true} name="whatsapp"
-                                    inputProps={{ maxLength: 45 }}
+                                    // inputProps={{ maxLength: 45 }}
                                     helperText={errors?.whatsapp?.length > 0 ? errors?.whatsapp[0]?.msg : ''}
                                     error={errors?.whatsapp?.length > 0}
                                     inputProps={{ minLength: 10, "data-validate": '[ { "key":"required"}]' }}

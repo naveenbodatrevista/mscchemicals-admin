@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { Redirect, Route } from 'react-router-dom'
-import Menu from '../../Menu';
+// import Menu from '../../Menu';
 const PrivateRoute = ({ component: Component, ...rest }) => {
 
    

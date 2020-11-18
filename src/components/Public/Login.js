@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import PageLoader from '../Common/PageLoader';
+// import PageLoader from '../Common/PageLoader';
 import { Redirect, Link } from 'react-router-dom';
-import { Input, FormFeedback } from 'reactstrap';
+import {  FormFeedback } from 'reactstrap';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/actions';
 import FormValidator from '../Forms/FormValidator.js';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { server_url, context_path } from '../Common/constants';
-import { FormHelperText, TextField } from '@material-ui/core';
+import {  TextField } from '@material-ui/core';
 import { Email, Lock } from '@material-ui/icons';
 
 
@@ -128,7 +128,7 @@ class Login extends Component {
                                             invalid={this.hasError('formLogin', 'email', 'required') || this.hasError('formLogin', 'email', 'email')}
                                             onChange={this.validateOnChange}
 
-                                            inputProps={{ "data-validate": '[{ "key":"required"},{ "key":"email"}]' }}
+                                            // inputProps={{ "data-validate": '[{ "key":"required"},{ "key":"email"}]' }}
                                             helperText={errors?.email?.length > 0 ? errors?.email[0]?.msg : ""}
                                             error={errors?.email?.length > 0}
                                             value={this.state.formLogin.email}
@@ -152,7 +152,7 @@ class Login extends Component {
                                             placeholder="Password"
                                             invalid={this.hasError('formLogin', 'password', 'required')}
                                             onChange={this.validateOnChange}
-                                            inputProps={{ "data-validate": '[{ "key":"required"},{"key":"minlen","param":"5"},{"key":"maxlen","param":"50"}]' }}
+                                            // inputProps={{ "data-validate": '[{ "key":"required"},{"key":"minlen","param":"5"},{"key":"maxlen","param":"50"}]' }}
                                             value={this.state.formLogin.password}
 
                                             helperText={errors?.password?.length > 0 ? errors?.password[0]?.msg : ""}

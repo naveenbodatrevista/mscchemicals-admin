@@ -5,7 +5,6 @@
   "author": "@themicon_co",
   "license": "https://wrapbootstrap.com/help/licenses",
   "private": true,
-  
   "scripts": {
     "start": "export NODE_ENV=development;node --max_old_space_size=5120; react-app-rewired start",
     "dev": "react-app-rewired start",

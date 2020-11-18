@@ -32,102 +32,88 @@ const FormValidator = {
             validations.forEach(m => {
                 switch (m.key) {
                     case 'required':
-                        
-                        var isValid=isCheckbox ? value === false : validator.isEmpty(value);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field is mandatory'}
-                            result.push(obj);
+
+                        if(isCheckbox ? value === false : validator.isEmpty(value)){
+                            result.push({key:m.key,msg:'Field is mandatory'});
                         }
                         break;
                     case 'email':
-                        var isValid =!validator.isEmail(value);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Please enter valid email'}
-                            result.push(obj);
+                       
+                        if(!validator.isEmail(value)){
+                            result.push({key:m.key,msg:'Please enter valid email'});
                         }
                         break;
                     case 'number':
-                        var isValid =  !validator.isNumeric(value);
-                        if(isValid){
-                        
-                        var obj= {key:m.key,msg:'Field should be number'}
-                            result.push(obj);
+                        var isValid3 =  !validator.isNumeric(value);
+                        if(isValid3){
+                            result.push({key:m.key,msg:'Field should be number'});
                         }
                         break;
                     case 'integer':
-                        var isValid = !validator.isInt(value);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should be integer'}
-                            result.push(obj);
+                        var isValid4 = !validator.isInt(value);
+                        if(isValid4){
+                            result.push({key:m.key,msg:'Field should be integer'});
                         
                         }
                         break;
                     case 'alphanum':
-                        var isValid = !validator.isAlphanumeric(value);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should be alpha numeric'}
-                            result.push(obj);
+                        var isValid5 = !validator.isAlphanumeric(value);
+                        if(isValid5){
+                            result.push({key:m.key,msg:'Field should be alpha numeric'});
                         
                         }
                         break;
                     case 'url':
-                        var isValid = !validator.isURL(value);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should be url'}
-                            result.push(obj);
+                        var isValid6 = !validator.isURL(value);
+                        if(isValid6){
+                            result.push({key:m.key,msg:'Field should be url'});
                         
                         }
                         break;
                     case 'equalto':
                         // here we expect a valid ID as m.param
                         const value2 = document.getElementById(m.param).value;
-                        var isValid = !validator.equals(value, value2);
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should be match'}
-                            result.push(obj);
+                        var isValid7 = !validator.equals(value, value2);
+                        if(isValid7){
+                            result.push({key:m.key,msg:'Field should be match'});
                         
                         }
                         break;
                     case 'minlen':
-                        var isValid = !validator.isEmpty(value) && !validator.isLength(value, { min: Number(m.param) });
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should have minimum length: '+m.param}
-                            result.push(obj);
+                        var isValid8 = !validator.isEmpty(value) && !validator.isLength(value, { min: Number(m.param) });
+                        if(isValid8){
+                            result.push({key:m.key,msg:'Field should have minimum length: '+m.param});
                         }
                         break;
                     case 'maxlen':
-                        var isValid = !validator.isEmpty(value) && !validator.isLength(value, { max: Number(m.param) });
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should have maximum length: '+m.param}
-                            result.push(obj);
+                        var isValid9 = !validator.isEmpty(value) && !validator.isLength(value, { max: Number(m.param) });
+                        if(isValid9){
+                            result.push({key:m.key,msg:'Field should have maximum length: '+m.param});
                         }
                         break;
                     case 'len':
                         const [min, max] = JSON.parse(m.param)
-                        var isValid = !validator.isEmpty(value) &&  !validator.isLength(value, { min, max });
-                        if(isValid){
-                            var obj= {key:m.key,msg:'Field should have min length '+min+' maximum length: '+max}
-                            result.push(obj);}
+                        var isValid11 = !validator.isEmpty(value) &&  !validator.isLength(value, { min, max });
+                        if(isValid11){
+                            result.push({key:m.key,msg:'Field should have min length '+min+' maximum length: '+max})}
                         break;
                     case 'min':
-                        var isValid = !validator.isInt(value, { min: validator.toInt(m.param) });
-                        if(isValid){
-                        var obj=  {key:m.key,msg:'Field should have minimum characters'};
-                        result.push(obj);
+                        var isValid12 = !validator.isInt(value, { min: validator.toInt(m.param) });
+                        if(isValid12){
+                        result.push({key:m.key,msg:'Field should have minimum characters'});
                         }
                         break;
                     case 'max':
-                        var isValid = !validator.isInt(value, { max: validator.toInt(m.param) });
-                        if(isValid){
-                            var obj=  {key:m.key,msg:'Field should not exceed maximum characters'};
-                            result.push(obj);  
+                        var isValid13 = !validator.isInt(value, { max: validator.toInt(m.param) });
+                        if(isValid13){
+                            result.push({key:m.key,msg:'Field should not exceed maximum characters'});  
                     }
                         break;
                     case 'list':
                         const list = JSON.parse(m.param)
-                        var isValid = !validator.isIn(value, list);
-                        if(isValid){
-                            var obj=  {status:isValid,message: isValid?'Invalid value':''};
+                        var isValid14 = !validator.isIn(value, list);
+                        if(isValid14){
+                            result.push({status:isValid,message: isValid?'Invalid value':''});  
                         }
                         break;
                     default:

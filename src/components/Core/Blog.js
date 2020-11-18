@@ -330,7 +330,7 @@ class Blog extends React.Component {
 
     createImageItem = () => (
         <Col md={3} >
-            <a href="#"  onClick={o => this.deleteImageItem()}>
+            <a href="#s"  onClick={o => this.deleteImageItem()}>
                 {this.state.newPost.image !== undefined && this.state.newPost.image.trim().length > 0 &&
                     <img className="img-fluid mb-2" alt="error" src={this.state.newPost.image} />
                 }
@@ -468,7 +468,7 @@ class Blog extends React.Component {
                                                                 <Button className="btn-link" onClick={() => this.editPost(i)}>{post.title}</Button>
                                                             </td>
                                                             <td>
-                                                                <a className="btn-link" onClick={(e) => this.openUrl(post.url, e)} href="#" >{post.url}</a>
+                                                                <a className="btn-link" onClick={(e) => this.openUrl(post.url, e)} href="#s" >{post.url}</a>
                                                             </td>
                                                             <td>
                                                                 {post.hits}

@@ -34,7 +34,7 @@ class AddShipmentDetails extends Component {
 
     state = {
         editFlag: false,
-        status: [],
+        // status: [],
         formWizard: {
             globalErrors: [],
             msg: '',
