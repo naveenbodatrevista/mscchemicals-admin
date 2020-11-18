@@ -113,7 +113,7 @@ const FormValidator = {
                         const list = JSON.parse(m.param)
                         var isValid14 = !validator.isIn(value, list);
                         if(isValid14){
-                            result.push({status:isValid,message: isValid?'Invalid value':''});  
+                            result.push({status:isValid14,message: isValid14?'Invalid value':''});  
                         }
                         break;
                     default:
