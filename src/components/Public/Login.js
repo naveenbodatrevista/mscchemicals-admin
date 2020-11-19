@@ -13,7 +13,7 @@ import { Email, Lock } from '@material-ui/icons';
 
 
 class Login extends Component {
-
+ 
     state = {
         loading: false,
         formLogin: {
@@ -24,6 +24,7 @@ class Login extends Component {
 
     componentWillMount() {
         console.log('Component will mount');
+        console.log("server :"+server_url);
     }
 
     validateOnChange = event => {
@@ -58,6 +59,7 @@ class Login extends Component {
                 errors
             }
         });
+        
         let userObj = { userName: this.state.formLogin.email, password: this.state.formLogin.password }
         fetch(server_url + context_path + 'user-login',
             {
