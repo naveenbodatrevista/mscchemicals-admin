@@ -15,7 +15,7 @@ import AddQuotation from './AddQuotation';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class Quotation extends Component {
     state = {

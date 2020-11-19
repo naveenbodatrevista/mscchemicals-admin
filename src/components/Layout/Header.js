@@ -139,11 +139,11 @@ class Header extends Component {
                     <ul className="navbar-nav mr-auto flex-row">
                         <li className="nav-item">
                             { /* Button used to collapse the left sidebar. Only visible on tablet and desktops */}
-                            <a href="" className="nav-link d-none d-md-block d-lg-block d-xl-block" onClick={this.toggleCollapsed}>
+                            <a href="#s" className="nav-link d-none d-md-block d-lg-block d-xl-block" onClick={this.toggleCollapsed}>
                                 <em className="fas fa-bars"></em>
                             </a>
                             { /* Button to show/hide the sidebar on mobile. Visible on mobile only. */}
-                            <a href="" className="nav-link sidebar-toggle d-md-none" onClick={this.toggleAside}>
+                            <a href="#s" className="nav-link sidebar-toggle d-md-none" onClick={this.toggleAside}>
                                 <em className="fas fa-bars"></em>
                             </a>
                         </li>
@@ -171,7 +171,7 @@ class Header extends Component {
                         <UncontrolledDropdown nav inNavbar className="dropdown-list">
                             <DropdownToggle nav className="dropdown-toggle-nocaret"  onClick={this.markRead}>
                                 <em className="fa fa-bell"></em>
-                                {this.state.newNotiCount != 0 &&
+                                {this.state.newNotiCount !== 0 &&
                                     <span className="badge badge-danger">{this.state.newNotiCount}</span>}
                             </DropdownToggle>
                             { /* START Dropdown menu */}
@@ -207,7 +207,7 @@ class Header extends Component {
 
                         { /* START Offsidebar button */}
                         <li className="nav-item d-none">
-                            <a className="nav-link" href="" onClick={this.toggleOffsidebar}>
+                            <a className="nav-link" href="#s" onClick={this.toggleOffsidebar}>
                                 <em className="fa fa-notebook"></em>
                             </a>
                         </li>

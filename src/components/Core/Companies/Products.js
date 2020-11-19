@@ -20,7 +20,7 @@ import FormValidator from '../../Forms/FormValidator';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class Products extends Component {
     state = {
@@ -140,7 +140,7 @@ class Products extends Component {
     }
     
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
     
         const tabPane = document.getElementById('saveCForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
@@ -188,7 +188,7 @@ class Products extends Component {
                         })
                     }
     
-                    if(idx == products.length - 1) {
+                    if(idx === products.length - 1) {
                         this.setState({ loading: false });
     
                         setTimeout(() => {

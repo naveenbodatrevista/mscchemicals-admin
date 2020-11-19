@@ -246,8 +246,8 @@ class Users extends Component {
 
         if (this.state.editFlag) {
             url += this.state.newObj.id;
-            this.state.newObj.email = undefined;
-            if (newObj.password.length == 0) {
+            // this.state.newObj.email = undefined;
+            if (newObj.password.length === 0) {
                 newObj.password = undefined;
             }
 
@@ -292,10 +292,10 @@ class Users extends Component {
     patchObj(idx) {
         var user = this.state.objects[idx];
 
-        if (user.id != this.props.user.id) {
+        if (user.id !== this.props.user.id) {
             axios.patch(server_url + context_path + "admin/users/" + user.id)
                 .then(res => {
-                    this.state.objects[idx].enabled = !this.state.objects[idx].enabled;
+                    // this.state.objects[idx].enabled = !this.state.objects[idx].enabled;
                     this.setState({ objects: this.state.objects });
                 }).finally(() => {
                     this.setState({ loading: false });

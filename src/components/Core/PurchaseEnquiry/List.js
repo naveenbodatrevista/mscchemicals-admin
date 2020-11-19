@@ -12,7 +12,7 @@ import FileDownload from '../../Common/FileDownload';
 
 import CustomPagination from '../../Common/CustomPagination';
 import * as Const from '../../Common/constants';
-import { Button, TextField, Select, MenuItem, InputLabel, FormControl, Tab, Tabs, AppBar } from '@material-ui/core';
+import { Button, TextField, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
 
 import 'react-datetime/css/react-datetime.css';
 import MomentUtils from '@date-io/moment';
@@ -161,10 +161,10 @@ class List extends Component {
         this.props.onUpdateRequest(obj.id);
     }
 
-    editObj(idx) {
-        var obj = this.state.objects[idx];
-        this.props.onUpdateRequest(obj.id);
-    }
+    // editObj(idx) {
+    //     var obj = this.state.objects[idx];
+    //     this.props.onUpdateRequest(obj.id);
+    // }
 
     patchObj(idx) {
         var obj = this.state.objects[idx];

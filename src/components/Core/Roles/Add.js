@@ -153,7 +153,7 @@ class Add extends Component {
     }
 
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
 
         const tabPane = document.getElementById('saveForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
@@ -271,7 +271,7 @@ class Add extends Component {
                                         inputProps={{ readOnly: this.state.formWizard.obj.defaultRole ? true : false, maxLength: 30, "data-validate": '[{ "key":"required"},{ "key":"minlen","param":"5"},{"key":"maxlen","param":"30"}]' }}
                                         helperText={errors?.name?.length > 0 ? errors?.name[0]?.msg : ""}
                                         error={errors?.name?.length > 0} value={this.state.formWizard.obj.name}
-                                        value={this.state.formWizard.obj.name} onChange={e => this.setField("name", e)} />
+                                         onChange={e => this.setField("name", e)} />
                                 </FormControl>
                             </fieldset>
 

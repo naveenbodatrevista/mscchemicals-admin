@@ -23,7 +23,7 @@ import AddBranch from './AddBranch';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class Branches extends Component {
     state = {
@@ -68,7 +68,7 @@ class Branches extends Component {
     }
 
     editObj = (i) => {
-        if(i != undefined) {
+        if(i !== undefined) {
             var newObj = this.state.objs[i];
             this.setState({ newObj: newObj });
         }
@@ -171,7 +171,7 @@ class Branches extends Component {
                 
                 if(params.branch) {
                     for(var x in this.state.objs) {
-                        if(params.branch == this.state.objs[x].id) {
+                        if(params.branch === this.state.objs[x].id) {
                             this.viewObj(x);
                             return;
                         }
@@ -211,7 +211,7 @@ class Branches extends Component {
     setContactField(idx, field, e, noValidate) {
         var contacts = this.state.contacts;
 
-        var input = e.target;
+        // var input = e.target;
         contacts[idx][field] = e.target.value;
         
         contacts[idx].updated = true;
@@ -255,7 +255,7 @@ class Branches extends Component {
     }
 
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
 
         const tabPane = document.getElementById('saveCForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
@@ -302,7 +302,7 @@ class Branches extends Component {
                         })
                     }
 
-                    if(idx == contacts.length - 1) {
+                    if(idx === contacts.length - 1) {
                         this.setState({ loading: false });
 
                         setTimeout(() => {
@@ -356,7 +356,7 @@ class Branches extends Component {
                                                     <tr key={obj.id}>
                                                         <td>{i + 1}</td>
                                                         <td>
-                                                            <a className="btn-link" onClick={() => this.viewObj(i)}>
+                                                            <a href="#s" className="btn-link" onClick={() => this.viewObj(i)}>
                                                                 {obj.name}
                                                             </a>
                                                         </td>

@@ -245,7 +245,7 @@ class Add extends Component {
                         <div className="col-md-6 offset-md-3">
                         <fieldset>
                                 <TextareaAutosize placeholder="Request Description"
-                                disabled={this.props.user.role === 'ROLE_ADMIN' && this.state.formWizard.editFlag || readOnly}
+                                disabled={(this.props.user.role === 'ROLE_ADMIN' && this.state.formWizard.editFlag) || readOnly}
                                 name="description" fullWidth={true} rowsMin={3}
                                     inputProps={{ maxLength: 500, "data-validate": '[{ "key":"required"},{ "key":"maxlen","param:500},{ "key":"minlen","param:10}]' }}
                                     helperText={errors?.description?.length > 0 ? errors?.description[0]?.msg : ""}

@@ -23,7 +23,7 @@ import AddInventory from './AddInventory';
 import Quotation from './Quotation';
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class View extends Component {
     state = {
@@ -435,7 +435,7 @@ class View extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {this.props.user.role == 'ROLE_ADMIN' &&
+                                    {this.props.user.role === 'ROLE_ADMIN' &&
                                     <div className="col-md-4">
                                         <Assign onRef={ref => (this.assignRef = ref)} baseUrl={this.props.baseUrl}
                                                         parentObj={this.state.obj} currentId={this.props.currentId}></Assign>

@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import ContentWrapper from '../../Layout/ContentWrapper';
+// import ContentWrapper from '../../Layout/ContentWrapper';
 import { connect } from 'react-redux';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import axios from 'axios';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
-import { Table } from 'reactstrap';
-import PageLoader from '../../Common/PageLoader';
-import { Row, Col, Modal,
-    ModalHeader,
-    ModalBody } from 'reactstrap';
-import Sorter from '../../Common/Sorter';
+// import { Table } from 'reactstrap';
+// import PageLoader from '../../Common/PageLoader';
+// import { Row, Col, Modal,
+//     ModalHeader,
+//     ModalBody } from 'reactstrap';
+// import Sorter from '../../Common/Sorter';
 
-import CustomPagination from '../../Common/CustomPagination';
-import { server_url, context_path, defaultDateFilter, getUniqueCode, getStatusBadge } from '../../Common/constants';
-import { Button, TextField, Select, MenuItem, InputLabel, FormControl, Tab, Tabs, AppBar } from '@material-ui/core';
+// import CustomPagination from '../../Common/CustomPagination';
+import { server_url, context_path,  getStatusBadge } from '../../Common/constants';
+import { Button } from '@material-ui/core';
 
 import 'react-datetime/css/react-datetime.css';
-import MomentUtils from '@date-io/moment';
-import {
-    DatePicker,
-    MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
-import Event from '@material-ui/icons/Event';
+// import MomentUtils from '@date-io/moment';
+// import {
+//     DatePicker,
+//     MuiPickersUtilsProvider,
+// } from '@material-ui/pickers';
+// import Event from '@material-ui/icons/Event';
 
-import TabPanel from '../../Common/TabPanel';
+// import TabPanel from '../../Common/TabPanel';
 
 import InvoiceHistory from './InvoiceHistory';
 import AddAccounts from './AddAccounts';
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class Accounts extends Component {
     state = {
@@ -206,7 +206,7 @@ class Accounts extends Component {
                 {this.state.editFlag &&
                     <div className="card b">
                         <div className="card-body bb bt">
-                            <AddAccounts baseUrl={this.state.baseUrl} currentId={this.state.currentId} parentObj={this.props.parentObj}
+                            <AddAccounts baseUrl={this.state.baseUrl} currentId={this.state.currentId} 
                             onRef={ref => (this.addTemplateRef = ref)} onSave={(id) => this.saveSuccess(id)} onCancel={this.cancelSave}
                             parentObj={this.props.parentObj}></AddAccounts>
                         </div>

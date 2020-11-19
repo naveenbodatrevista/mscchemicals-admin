@@ -12,7 +12,7 @@ import FormValidator from '../../Forms/FormValidator';
 import ContentWrapper from '../../Layout/ContentWrapper';
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 
 class AddBranch extends Component {
@@ -101,7 +101,7 @@ class AddBranch extends Component {
         var input = e.target;
         formWizard.obj[field] = input.value;
 
-        if(field == 'pincode' && input.value && input.value.length == 6) {
+        if(field === 'pincode' && input.value && input.value.length === 6) {
             axios.get(server_url + context_path + "api/pincodes?pincode=" + input.value)
             .then(res => {
                 if(res.data._embedded.pincodes && res.data._embedded.pincodes.length) {
@@ -152,7 +152,7 @@ class AddBranch extends Component {
     }
 
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
 
         const tabPane = document.getElementById('saveForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
@@ -321,10 +321,10 @@ class AddBranch extends Component {
                                     label="Landmark"
                                     required={true}
                                     fullWidth={true}
-                                    inputProps={{ "data-validate": '[{ "key":"required"}]' }}
+                                    
                                     helperText={errors?.landmark?.length > 0 ? errors?.landmark[0]?.msg : ""}
                                     error={errors?.landmark?.length > 0}
-                                    inputProps={{ minLength: 5, maxLength: 30 }}
+                                    inputProps={{ minLength: 5, maxLength: 30,"data-validate": '[{ "key":"required"}]' }}
                                     value={this.state.formWizard.obj.landmark}
                                     onChange={e => this.setField('landmark', e)} />
                             </fieldset>
@@ -352,10 +352,9 @@ class AddBranch extends Component {
                                         label="State"
                                         required={true}
                                         fullWidth={true}
-                                        inputProps={{ maxLength: 30, "data-validate": '[{ "key":"required"}]' }}
                                         helperText={errors?.state?.length > 0 ? errors?.state[0]?.msg : ""}
                                         error={errors?.state?.length > 0}
-                                        inputProps={{ minLength: 5, maxLength: 30 }}
+                                        inputProps={{ minLength: 5, maxLength: 30 ,"data-validate": '[{ "key":"required"}]'}}
                                         value={this.state.formWizard.obj.state}
                                         onChange={e => this.setField('state', e)} />
                                 </FormControl>
@@ -368,10 +367,9 @@ class AddBranch extends Component {
                                         label="City"
                                         required={true}
                                         fullWidth={true}
-                                        inputProps={{ maxLength: 30, "data-validate": '[{ "key":"required"}]' }}
+                                        inputProps={{ minLength: 5,maxLength: 30, "data-validate": '[{ "key":"required"}]' }}
                                         helperText={errors?.city?.length > 0 ? errors?.city[0]?.msg : ""}
                                         error={errors?.city?.length > 0}
-                                        inputProps={{ minLength: 5, maxLength: 30 }}
                                         value={this.state.formWizard.obj.city}
                                         onChange={e => this.setField('city', e)} />
                                 </FormControl>

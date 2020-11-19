@@ -289,10 +289,10 @@ class AddInventory extends Component {
                                 <td>{g.quantity}</td>
                                 <td>  <Moment format="DD MMM YY HH:mm">{g.mfgDate}</Moment></td>
                                 <td> <Moment format="DD MMM YY HH:mm">{g.expiryDate}</Moment></td>
-                                <td><a href="" className="btn-link" onClick={(e) => this.downloadFile(e,g.orderProduct, 'Sales COA')}>
+                                <td><a href="#s" className="btn-link" onClick={(e) => this.downloadFile(e,g.orderProduct, 'Sales COA')}>
                                     Sales COA
                                 </a></td>
-                                <td><a href="" className="btn-link" onClick={(e) => this.downloadFile(e,this.props.orderProduct.product.id, 'MOA')}>
+                                <td><a href="#s" className="btn-link" onClick={(e) => this.downloadFile(e,this.props.orderProduct.product.id, 'MOA')}>
                                     MOA
                                 </a></td>
                                 </tr>

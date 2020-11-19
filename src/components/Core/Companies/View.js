@@ -21,7 +21,7 @@ import Products from './Products';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 
 class View extends Component {
@@ -189,7 +189,7 @@ class View extends Component {
 
             this.setState({ newObj: res.data });
 
-            if(res.data.locationType != 'I') {
+            if(res.data.locationType !== 'I') {
                 if(!res.data.fssai || !res.data.drugLicense || !res.data.others) {
                     var fileTypes1 = this.state.fileTypes1;
 
@@ -310,13 +310,13 @@ class View extends Component {
                                                 <td>
                                                     <strong>Type</strong>
                                                 </td>
-                                                <td>{this.state.newObj.type == 'B' ? 'Buyer' : 'Seller'}</td>
+                                                <td>{this.state.newObj.type === 'B' ? 'Buyer' : 'Seller'}</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <strong>Location</strong>
                                                 </td>
-                                                <td>{this.state.newObj.locationType == 'I' ? 'International' : 'National'}</td>
+                                                <td>{this.state.newObj.locationType === 'I' ? 'International' : 'National'}</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -340,7 +340,7 @@ class View extends Component {
                                             </tr>
                                         </tbody>
 
-                                            {(this.state.newObj.type == 'V' && this.state.newObj.locationType == 'N') &&
+                                            {(this.state.newObj.type === 'V' && this.state.newObj.locationType === 'N') &&
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -356,7 +356,7 @@ class View extends Component {
                                             </tr>
                                         </tbody>}
 
-                                        {(this.state.newObj.type == 'V' && this.state.newObj.locationType == 'I') &&
+                                        {(this.state.newObj.type === 'V' && this.state.newObj.locationType === 'I') &&
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -432,7 +432,7 @@ class View extends Component {
                                                 <td>{this.state.newObj.categoriesInterested}</td>
                                             </tr>
 
-                                            {this.state.newObj.type == 'B' &&
+                                            {this.state.newObj.type === 'B' &&
                                             <tr>
                                                 <td>
                                                     <strong>Agent</strong>
@@ -441,7 +441,7 @@ class View extends Component {
                                             </tr>}
                                         </tbody>
 
-                                        {(this.state.newObj.type == 'B' || this.state.newObj.location == 'N') &&
+                                        {(this.state.newObj.type === 'B' || this.state.newObj.location === 'N') &&
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -477,9 +477,9 @@ class View extends Component {
                                                 <td>
                                                     <strong>MSME</strong>
                                                 </td>
-                                                <td>{this.state.newObj.msme == 'N' ? 'No': 'Yes'}</td>
+                                                <td>{this.state.newObj.msme === 'N' ? 'No': 'Yes'}</td>
                                             </tr>
-                                            {this.state.newObj.msme == 'Y' && <tr>
+                                            {this.state.newObj.msme === 'Y' && <tr>
                                                 <td>
                                                     <strong>MSME Id</strong>
                                                 </td>
@@ -505,7 +505,7 @@ class View extends Component {
                         </TabPanel>
                         <TabPanel value={this.state.activeTab} index={3}>
                             <Upload onRef={ref => (this.uploadRef = ref)} fileFrom={this.props.baseUrl} currentId={this.props.currentId} 
-                            fileTypes={this.state.newObj.locationType == 'I' ? this.state.fileTypes2 : this.state.fileTypes1}></Upload>
+                            fileTypes={this.state.newObj.locationType === 'I' ? this.state.fileTypes2 : this.state.fileTypes1}></Upload>
                         </TabPanel>
                     </div>
                 </div>}

@@ -159,10 +159,10 @@ class List extends Component {
         this.props.onUpdateRequest(obj.id);
     }
 
-    editObj(idx) {
-        var obj = this.state.objects[idx];
-        this.props.onUpdateRequest(obj.id);
-    }
+    // editObj(idx) {
+    //     var obj = this.state.objects[idx];
+    //     this.props.onUpdateRequest(obj.id);
+    // }
 
     patchObj(idx) {
         var obj = this.state.objects[idx];
@@ -315,7 +315,7 @@ class List extends Component {
                                     </Link>
                                 </td>
                                 <td>
-                                    <Link to={`/${obj.type == 'Sales' ? 'sales' : 'purchases'}/${obj.enquiryId}`}>
+                                    <Link to={`/${obj.type === 'Sales' ? 'sales' : 'purchases'}/${obj.enquiryId}`}>
                                         {obj.type}
                                     </Link>
                                 </td>

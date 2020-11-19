@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import ContentWrapper from '../../Layout/ContentWrapper';
+// import ContentWrapper from '../../Layout/ContentWrapper';
 import { connect } from 'react-redux';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import axios from 'axios';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 import { Table } from 'reactstrap';
-import PageLoader from '../../Common/PageLoader';
+// import PageLoader from '../../Common/PageLoader';
 import {
-    Row, Col, Modal,
+     Modal,
     ModalHeader,
     ModalBody
 } from 'reactstrap';
 import SalesInventory from './SalesInventory';
-import Sorter from '../../Common/Sorter';
-import CustomPagination from '../../Common/CustomPagination';
-import { server_url, context_path, defaultDateFilter, getUniqueCode, getStatusBadge } from '../../Common/constants';
-import { Button, TextField, Select, MenuItem, InputLabel, FormControl, Tab, Tabs, AppBar } from '@material-ui/core';
+// import Sorter from '../../Common/Sorter';
+// import CustomPagination from '../../Common/CustomPagination';
+import { server_url, context_path, defaultDateFilter,  getStatusBadge } from '../../Common/constants';
+import { Button,  Tab, Tabs, AppBar } from '@material-ui/core';
 
 import 'react-datetime/css/react-datetime.css';
-import MomentUtils from '@date-io/moment';
-import {
-    DatePicker,
-    MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
-import Event from '@material-ui/icons/Event';
+// import MomentUtils from '@date-io/moment';
+// import {
+//     DatePicker,
+//     MuiPickersUtilsProvider,
+// } from '@material-ui/pickers';
+// import Event from '@material-ui/icons/Event';
 import TabPanel from '../../Common/TabPanel';
 import AddInventory from './AddInventory';
 import Add from './Add';
@@ -34,9 +34,9 @@ import Followups from '../Followups/Followups';
 import ShipmentDetails from './ShipmentDetails';
  
 import Accounts from './Accounts';
-import PurchaseDocs from './PurchaseDocs';
+// import PurchaseDocs from './PurchaseDocs';
 import Approval from '../Approvals/Approval';
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class View extends Component {
     state = {
@@ -351,7 +351,7 @@ class View extends Component {
                                 <div className="card b">
                                     <div className="card-header">
                                         <div className="float-right mt-2">
-                                        {this.state.obj.type == 'Sales' && <Button variant="contained" color="warning" size="xs" onClick={() => this.downloadInvoice()}>Download Invoice</Button> }
+                                        {this.state.obj.type === 'Sales' && <Button variant="contained" color="warning" size="xs" onClick={() => this.downloadInvoice()}>Download Invoice</Button> }
                                              
                                        {this.state.obj.status !=='Completed' &&  <Status onRef={ref => (this.statusRef = ref)} baseUrl={this.props.baseUrl} currentId={this.props.currentId}
                                                 onUpdate={(id) => this.updateStatus(id)} statusList={this.state.status} status={this.state.obj.status}
@@ -377,7 +377,7 @@ class View extends Component {
                                                         <strong>Type</strong>
                                                     </td>
                                                     <td>
-                                                        <Link to={`/${this.state.obj.type == 'Sales' ? 'sales' : 'purchases'}/${this.state.obj.enquiryId}`}>
+                                                        <Link to={`/${this.state.obj.type === 'Sales' ? 'sales' : 'purchases'}/${this.state.obj.enquiryId}`}>
                                                             {this.state.obj.type}
                                                         </Link>
                                                     </td>
@@ -474,7 +474,7 @@ class View extends Component {
                             </TabPanel>}
                             <TabPanel value={this.state.activeTab} index={1}>
                                 <ShipmentDetails baseUrl={this.props.baseUrl} onRef={ref => (this.quotationTemplateRef = ref)} 
-                                currentId={this.props.currentId} parentObj={this.state.obj} parentObj={this.state.obj}></ShipmentDetails>
+                                currentId={this.props.currentId} parentObj={this.state.obj}></ShipmentDetails>
                             </TabPanel>
                             {/* <TabPanel value={this.state.activeTab} index={2}>
                                 <Inventory baseUrl={this.props.baseUrl} onRef={ref => (this.quotationTemplateRef = ref)} 
@@ -482,7 +482,7 @@ class View extends Component {
                             </TabPanel>*/}
                             <TabPanel value={this.state.activeTab} index={2}>
                                 <Accounts baseUrl={this.props.baseUrl} onRef={ref => (this.quotationTemplateRef = ref)} 
-                                currentId={this.props.currentId} parentObj={this.state.obj} parentObj={this.state.obj}></Accounts>
+                                currentId={this.props.currentId}  parentObj={this.state.obj}></Accounts>
                             </TabPanel>
                             <TabPanel value={this.state.activeTab} index={3}>
                                 <Followups repository={this.props.baseUrl} reference={this.state.obj.id} onRef={ref => (this.followupsTemplateRef = ref)}></Followups> 

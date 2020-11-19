@@ -25,7 +25,7 @@ import ContentWrapper from '../../Layout/ContentWrapper';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 
 class Upload extends Component {
@@ -212,7 +212,7 @@ class Upload extends Component {
         var doc = this.state.formWizard.docs.find(g => g.fileType === type);
         if (doc) {
             // return doc.fileName;
-            return <a className="btn-link" onClick={(e) => this.downloadFile(e, type)}>
+            return <a href="#s" className="btn-link" onClick={(e) => this.downloadFile(e, type)}>
                         {doc.fileName}
                     </a>
         } else {
@@ -241,7 +241,7 @@ class Upload extends Component {
     setField(field, e) {
         var formWizard = this.state.formWizard;
 
-        var input = e.target;
+        // var input = e.target;
         formWizard.obj[field] = e.target.value;
         this.setState({ formWizard });
     }

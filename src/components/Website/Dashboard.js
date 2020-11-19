@@ -1,7 +1,7 @@
 import { server_url, context_path, getDateToAndFrom} from '../Common/constants';
-import React, { Component } from 'react';
+import React from 'react';
 import PageLoader from '../Common/PageLoader';
-import { Trans } from 'react-i18next';
+// import { Trans } from 'react-i18next';
 import ContentWrapper from '../Layout/ContentWrapper';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -15,9 +15,9 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 import {
     Row, Col, Table
 } from 'reactstrap';
-import Now from '../Common/Now';
+// import Now from '../Common/Now';
 
-import { Button, TextField, Select, MenuItem, InputLabel, FormControl, Card, Tab, Tabs, AppBar } from "@material-ui/core";
+import {  Card, } from "@material-ui/core";
 
 BigCalendar.momentLocalizer(moment);
 
@@ -141,7 +141,7 @@ class Dashboard extends React.Component {
                     <div>Dashboard</div>
                 </div>
                 <Row>
-                    {this.props.user.role == 'ROLE_ADMIN' &&
+                    {this.props.user.role === 'ROLE_ADMIN' &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/users'>
@@ -156,7 +156,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/companies'>
@@ -171,7 +171,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/company-contact'>
@@ -186,7 +186,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_PD') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_PD') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/products'>
@@ -201,7 +201,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_OR') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_OR') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/orders'>
@@ -216,7 +216,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_SE') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_SE') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/sales'>
@@ -231,7 +231,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_PR') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_PR') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/purchases'>
@@ -246,7 +246,7 @@ class Dashboard extends React.Component {
                             </div>
                         </Link>
                     </Col>}
-                    {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_OR') != -1) &&
+                    {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_OR') !== -1) &&
                     <Col xl={3} md={6}>
                         { /* START card */}
                         <Link className="text-decoration-none" to='/orders'>
@@ -262,7 +262,7 @@ class Dashboard extends React.Component {
                         </Link>
                     </Col>}
                 </Row>
-                {(this.props.user.role == 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') != -1) &&
+                {(this.props.user.role === 'ROLE_ADMIN' || this.props.user.permissions.indexOf('MG_CM') !== -1) &&
                     <Card className="card-default">
                         <div className="card-header">
                             <div className="row">

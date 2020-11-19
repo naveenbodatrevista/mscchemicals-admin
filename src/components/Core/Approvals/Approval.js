@@ -97,7 +97,7 @@ class Approvals extends Component {
         return (
             <ContentWrapper>
                 {this.state.loading && <PageLoader />}
-                {this.state.currentId == 0 && 
+                {this.state.currentId === 0 && 
                 <div>
                     {!this.props.repository &&
                     <div className="content-heading">Communication History </div>}                    

@@ -14,7 +14,7 @@ import View from './View';
 
 
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class Companies extends Component {
     state = {
@@ -67,7 +67,7 @@ class Companies extends Component {
         return (
             <ContentWrapper>
                 {this.state.loading && <PageLoader />}
-                {this.state.currentId == 0 && 
+                {this.state.currentId === 0 && 
                 <div>
                     <div className="content-heading">Companies </div>
                     <div className="row">

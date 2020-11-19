@@ -135,7 +135,7 @@ class AddShipmentDetails extends Component {
     }
 
     checkForError() {
-        const form = this.formWizardRef;
+        // const form = this.formWizardRef;
 
         const tabPane = document.getElementById('orderQuoteForm');
         const inputs = [].slice.call(tabPane.querySelectorAll('input,select'));
