@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ContentWrapper from '../../Layout/ContentWrapper';
 import { connect } from 'react-redux';
 import swal from 'sweetalert';
-import moment from 'moment';
+// import moment from 'moment';
 import axios from 'axios';
 // import { server_url, context_path, defaultDateFilter, getUniqueCode, getStatusBadge } from '../../Common/constants';
 import { server_url, context_path, } from '../../Common/constants';

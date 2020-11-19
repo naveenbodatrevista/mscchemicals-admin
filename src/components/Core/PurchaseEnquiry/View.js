@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
-import ContentWrapper from '../../Layout/ContentWrapper';
+// import ContentWrapper from '../../Layout/ContentWrapper';
 import { connect } from 'react-redux';
 import swal from 'sweetalert';
 import axios from 'axios';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 import { Table } from 'reactstrap';
-import PageLoader from '../../Common/PageLoader';
-import {
-    Row, Col, Modal,
-    ModalHeader,
-    ModalBody
-} from 'reactstrap';
-import Sorter from '../../Common/Sorter';
-import CustomPagination from '../../Common/CustomPagination';
-import { server_url, context_path, defaultDateFilter, getUniqueCode, getStatusBadge } from '../../Common/constants';
-import { Button, TextField, Select, MenuItem, InputLabel, FormControl, Tab, Tabs, AppBar } from '@material-ui/core';
+// import PageLoader from '../../Common/PageLoader';
+// import {
+//     Row, Col, Modal,
+//     ModalHeader,
+//     ModalBody
+// } from 'reactstrap';
+// import Sorter from '../../Common/Sorter';
+// import CustomPagination from '../../Common/CustomPagination';
+import { server_url, context_path, defaultDateFilter,  getStatusBadge } from '../../Common/constants';
+import { Button,  Tab, Tabs, AppBar } from '@material-ui/core';
 
 import 'react-datetime/css/react-datetime.css';
-import MomentUtils from '@date-io/moment';
-import {
-    DatePicker,
-    MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
-import Event from '@material-ui/icons/Event';
+// import MomentUtils from '@date-io/moment';
+// import {
+//     DatePicker,
+//     MuiPickersUtilsProvider,
+// } from '@material-ui/pickers';
+// import Event from '@material-ui/icons/Event';
 import TabPanel from '../../Common/TabPanel';
 import Approval from '../Approvals/Approval';
 import Add from './Add';
-import Upload from '../Common/Upload';
+// import Upload from '../Common/Upload';
 import Status from '../Common/Status';
 import Assign from '../Common/Assign';
 import Followups from '../Followups/Followups';
-import Quotation from './Quotation';
+// import Quotation from './Quotation';
 
 import { createOrder } from '../Orders/Create';
 
-const json2csv = require('json2csv').parse;
+// const json2csv = require('json2csv').parse;
 
 class View extends Component {
     state = {
@@ -438,7 +438,7 @@ class View extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {this.props.user.role == 'ROLE_ADMIN' &&
+                                    {this.props.user.role === 'ROLE_ADMIN' &&
                                     <div className="col-md-4">
                                         <Assign onRef={ref => (this.assignRef = ref)} baseUrl={this.props.baseUrl}
                                                         parentObj={this.state.obj} currentId={this.props.currentId}></Assign>

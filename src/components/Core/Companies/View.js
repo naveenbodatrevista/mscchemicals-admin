@@ -437,7 +437,7 @@ class View extends Component {
                                                 <td>
                                                     <strong>Agent</strong>
                                                 </td>
-                                                <td>{this.state.newObj.agent == 'N' ? 'No': 'Yes'}</td>
+                                                <td>{this.state.newObj.agent === 'N' ? 'No': 'Yes'}</td>
                                             </tr>}
                                         </tbody>
 

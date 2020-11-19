@@ -42,7 +42,7 @@ class CharCountTextarea extends React.Component {
 
     renderCredits = () => {
         // const { charsLeft } = this.state;
-        const regex = /[^\x00-\xFF]+/;
+        const regex =new RegExp("/[^\\\x00-\xFF]+/");
 
         const charCompleted = this.props.value.length;
         var credits = 0;

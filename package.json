@@ -20,7 +20,10 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-control-regex": 0
+    }
   },
   "browserslist": [
     ">0.2%",
