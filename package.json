@@ -6,7 +6,7 @@
   "license": "https://wrapbootstrap.com/help/licenses",
   "private": true,
   "homepage": "https://zealous-golick-7db315.netlify.app/",
-  "proxy": "http://51804ffec8dd.ngrok.io/",
+  "proxy": "https://51804ffec8dd.ngrok.io/",
   "scripts": {
     "start": "export NODE_ENV=development;node --max_old_space_size=5120; react-app-rewired start",
     "dev": "react-app-rewired start",

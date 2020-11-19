@@ -31,7 +31,7 @@ export const APP_MEDIAQUERY = {
 };
 
 
-export const server_url = 'http://51804ffec8dd.ngrok.io/';
+export const server_url = 'https://51804ffec8dd.ngrok.io/';
 export const context_path = 'msc-api/'
 
 export function getSqlDate(date) {
